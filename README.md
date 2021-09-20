@@ -33,10 +33,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway & run Docker w/ Ansible  | 10.0.0.4   | Linux (Ubuntu 18.04)            |
+| Web-1     |   Web Server w/DVWA       |    10.0.0.5        |   Linux (Ubuntu 18.04)               |
+| Web-2     |   Web Server w/DVWA       |   10.0.0.6         |     Linux (Ubuntu 18.04)             |
+| ELKStack    |    Server (ELK Container & Kibana)      |  10.1.0.4          |    Linux (Ubuntu 18.04)              |
 
 ### Access Policies
 
@@ -52,9 +52,11 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes              | Home Network Public IP    |
+| Web-1    |  Yes (Port 80)      |        Home Network Public IP              |
+|  Web-2   |   Yes (Port 80)      |       Home Network Public IP               |
+| ElKStack |   Yes (Port 5601)      |Home Network Public IP
+| Load Balancer  |  Yes (Port 80)|  Home Network Public IP
 
 ### Elk Configuration
 
