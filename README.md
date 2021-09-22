@@ -104,11 +104,11 @@ By using Ansible this made it possible to configure mulitple servers with identi
 The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
 
-- Docler.io installed and marked for present to ensure most current version
-- Install python3-pip and marked for presnt to ensure the most current version
-- Install Docker Module and marked for present to ensure that most current version
-- sysctl module to use more memory value of 262144 state marked present to en
-- Download and launch a docker elk container image sebp/elk:761 state of started and restart policy of always
+-  Docker.io installed and marked for present to ensure most current version
+-  Install python3-pip and marked for presnt to ensure the most current version
+-  Install Docker Module and marked for present to ensure that most current version
+-  sysctl module to use more memory value of 262144 state marked present to en
+-  Download and launch a docker elk container image sebp/elk:761 state of started and restart policy of always
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -169,21 +169,23 @@ You will need to have an Azure account and set up the required VM's and NSG setu
 From there to set up the DVWA playbook in your Bash account. 
 
 Gain access to your jump server. The next step is to access the Ansible
-    These are following command:
-        :sudo docker container list -a
-        :sudo docker start <use the name that comes form the container list>
-        :sudo docker attach <name>
-     if done correctly you should now be in Ansible
+  These are following command:
+   :sudo docker container list -a
+   :sudo docker start <use the name that comes form the container list>
+   :sudo docker attach <name>
+ if done correctly you should now be in Ansible
  
   To move to the Playbooks you will to need to do the following:
   
-      cd /etc/ansible   then once in do  ls
+  cd /etc/ansible   then once in do  ls
   
-      The DVWA playbook will not be there more than likely. So you will need to create one. You initiate the work with either Nano, VI or VIM
+  The DVWA playbook will not be there more than likely. So you will need to create one. You initiate the work with either Nano, VI or VIM
   
-      VI is the editor command I use. Type VI  and the name you will be naming this playbook. It must follow this format. Here is an example (my-playbook.yml)  The name must  have .yml at the very end.    Once in hit I to insert, then enter the below items
+  The VI is the editor command I use. 
+  Type VI  and the name you will be naming this playbook. It must follow this format. Here is an example (my-playbook.yml)  The name must  have .yml at the very end.   
+  Once in hit I to insert, then enter the below items
   
-  ---
+---
 - name: my-playbook.yml
   hosts: webservers
   become: true
@@ -221,20 +223,3 @@ Gain access to your jump server. The next step is to access the Ansible
   Then hit ESC     the press the shift button  and press :wq  and the hit enter
   
   This will bring you back. Now type    ls   and your new playbook will show up
-  
-        
-  
-  
-  
-  
-  
-  
-  
-  
-    
-
-
-
-
-
-
