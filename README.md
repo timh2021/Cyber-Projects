@@ -177,12 +177,14 @@ Gain access to your jump server. The next step is to access the Ansible
  
   To move to the Playbooks you will to need to do the following:
   
-  cd /etc/ansible   then once in do  ls
+ - cd /etc/ansible   then once in do  ls
   
   The DVWA playbook will not be there more than likely. So you will need to create one. You initiate the work with either Nano, VI or VIM
   
-  The VI is the editor command I use. 
-  Type VI  and the name you will be naming this playbook. It must follow this format. Here is an example (my-playbook.yml)  The name must  have .yml at the very end.   
+  The VI is the editor command I used 
+  
+ - Type VI  and the title you will be naming this playbook. It must follow this format. Here is an example (my-playbook.yml)  The name must have .yml at the very end.   
+  
   Once in hit I to insert, then enter the below items
   
 ---
@@ -220,6 +222,15 @@ Gain access to your jump server. The next step is to access the Ansible
      name: docker
      enabled: yes
   
-  Then hit ESC     the press the shift button  and press :wq  and the hit enter
+  Then hit ESC  the press the shift button enter the : symbol then type w and q  (:wq) and then hit enter
+  Now type    
+  - ls   This show your new playbook
   
-  This will bring you back. Now type    ls   and your new playbook will show up
+  Now you want to run the playbook to upload the images. Enter the following command
+  
+  - 
+  
+  
+  
+  
+  
