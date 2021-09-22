@@ -112,7 +112,9 @@ In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Do
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](https://github.com/timh2021/Cyber-Projects/blob/main/Images/Screen%20shots/metricbeat-playbook-launch.jpg)
+![Update the path with the name of your screenshot of docker ps output](https://github.com/timh2021/Cyber-Projects/blob/main/Images/Screen%20shots/metricbeat-playbook-launch.jpg)
+![Update the path with the name of your screenshot of docker ps output](https://github.com/timh2021/Cyber-Projects/blob/main/Images/Screen%20shots/filebeat-kibana-launch.jpg)
+![Update the path with the name of your screenshot of docker ps output](https://github.com/timh2021/Cyber-Projects/blob/main/Images/Screen%20shots/metricbeat-kibana-launch.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
