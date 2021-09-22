@@ -228,11 +228,11 @@ Gain access to your jump server. The next step is to access the Ansible
   
   Now you want to run the playbook to upload the images. Enter the following command
   
-  - ansible-playbook DVWA-playbook.yml       then enter
+  - ansible-playbook my-playbook.yml
   
   ![TODO: Update the path with the name of your diagram](https://github.com/timh2021/Cyber-Projects/blob/main/Images/Screen%20shots/DVWA-playbook-launch.jpg)
   
-  If entered correctly the program will run and all the info will load to the Ansible to be used
+  If entered correctly the program will run and all the info will load to the Ansible
   
   
   
