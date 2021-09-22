@@ -15,7 +15,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   - metricbeat-playbook.yml.txt
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -56,7 +56,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
   Metricbeat records metrics from the Operating System and Services running on the server
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -81,27 +81,34 @@ Machines within the network can only be accessed by Jump Box VM.
 
 - What was its IP address?
 
-  
+ Jump Box VM Public IP is 138.91.177.129 and Private IP is 10.0.0.4 
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes              | Home Network Public IP    |
-| Web-1    |  Yes (Port 80)      |        Home Network Public IP              |
-|  Web-2   |   Yes (Port 80)      |       Home Network Public IP               |
-| ElKStack |   Yes (Port 5601)      |Home Network Public IP
-| Load Balancer  |  Yes (Port 80)|  Home Network Public IP
+| Jump Box | Yes              | 138.91.177.129    |
+| Web-1    |  Yes (Port 80)      |        138.91.177.129              |
+|  Web-2   |   Yes (Port 80)      |       138.91.177.129               |
+| ElKStack |   Yes (Port 5601)      |138.91.177.129
+| Load Balancer  |  Yes (Port 80)|  138.91.177.129
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allowes for ELK to be installed on multiple servers from a single ansible session, resulting in a more streamlined process and a uniform install across the servers. It also allowes version control or updates without having to manually check each server.
+
+- What is the main advantage of automating configuration with Ansible?
+
+By using Ansible this made it possible to configure mulitple servers with identical services without having to manually configure each server individually which saves time and ensures consistent services are provided throughout the servers.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
+
+- Docler.io installed and marked for present to ensure most current version
+- Install python3-pip and marked for presnt to ensure the most current version
+- Install Docker Module and marked for present to ensure that most current version
+- sysctl module to use more memory value of 262144 state marked present to en
+- Download and launch a docker elk container image sebp/elk:761 state of started and restart policy of always
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
