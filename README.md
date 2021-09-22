@@ -2,11 +2,17 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+![TODO: Update the path with the name of your diagram](https://github.com/timh2021/Cyber-Projects/blob/main/Diagrams/Network%20diagrams/Network2.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - DVWA_My-playbook.yml.txt
+  - Host.txt
+  - ansible.cfg.txt
+  - filebeat-config.yml.txt
+  - filebeat-playbook.yml.txt
+  - metricbeat-config.yml.txt
+  - metricbeat-playbook.yml.txt_
 
 This document contains the following details:
 - Description of the Topologu
