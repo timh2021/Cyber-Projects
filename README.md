@@ -161,8 +161,80 @@ Answer the following questions to fill in the blanks:
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 
-  http://20.85.236.65:5601/app/kibana
-
-
+  http://20.85.236.65:5601/app/kibana   The link will not be active because the system is not running
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+You will need to have an Azure account and set up the required VM's and NSG setups.
+From there to set up the DVWA playbook in your Bash account. 
+
+Gain access to your jump server. The next step is to access the Ansible
+    These are following command:
+        :sudo docker container list -a
+        :sudo docker start <use the name that comes form the container list>
+        :sudo docker attach <name>
+     if done correctly you should now be in Ansible
+ 
+  To move to the Playbooks you will to need to do the following:
+  
+      cd /etc/ansible   then once in do  ls
+  
+      The DVWA playbook will not be there more than likely. So you will need to create one. You initiate the work with either Nano, VI or VIM
+  
+      VI is the editor command I use. Type VI  and the name you will be naming this playbook. It must follow this format. Here is an example (my-playbook.yml)  The name must  have .yml at the very end.    Once in hit I to insert, then enter the below items
+  
+  ---
+- name: my-playbook.yml
+  hosts: webservers
+  become: true
+  tasks:
+  - name: docker.io
+    apt:
+     update_cache: yes
+     name: docker.io
+     state: present
+     force_apt_get: yes
+
+  - name: Install pip3
+    apt:
+     name: python3-pip
+     state: present
+
+  - name: Install Docker python module
+    pip:
+     name: docker
+     state: present
+
+  - name: download and launch a docker web container
+    docker_container:
+     name: dvwa
+     image: cyberxsecurity/dvwa
+     state: started
+     restart_policy: always
+     published_ports: 80:80
+
+  - name: Enable docker service
+    systemd:
+     name: docker
+     enabled: yes
+  
+  Then hit ESC     the press the shift button  and press :wq  and the hit enter
+  
+  This will bring you back. Now type    ls   and your new playbook will show up
+  
+        
+  
+  
+  
+  
+  
+  
+  
+  
+    
+
+
+
+
+
+
